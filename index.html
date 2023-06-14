@@ -6,27 +6,34 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
-      background-color: #343a40;
+      background-color: #333;
     }
     .custom-select {
       background-color: #343a40;
       color: #ffffff;
       border-color: #000000;
       border: 1px solid #000000;
+      margin-top: 10px;
     }
     .custom-select option {
       background-color: #343a40;
       color: #ffffff;
     }
+    .top-bar {
+      background-color: #113752;
+      height: 50px;
+      margin-bottom: 20px;
+    }
   </style>
   <title>Selection Dropdown Menu</title>
 </head>
 <body>
+  <div class="top-bar"></div>
   <div class="container mt-4">
     <div class="row">
       <div class="col">
         <select class="form-control custom-select" id="select_merk_idnr" name="merk_idnr">
-          <option value="-1">Kies een merk</option>
+          <option value="-1">Kies een merk:</option>
           <option value="43">BENELLI</option>
           <option value="4">BMW</option>
           <option value="11">DUCATI</option>
@@ -41,84 +48,164 @@
           <option value="40">YAMAHA</option>
         </select>
       </div>
-      <div class="col">
+      <div class="col-4">
         <select class="form-control custom-select" id="select_year_from" onchange="setFilter(jQuery(this).val(), true, 'yf', 'advance');" name="year_from">
-          <option value="">Bouwjaar van</option>
+          <option value="">Bouwjaar van:</option>
           <option value="1990">1990</option>
-          <option value="1991">1991</option>
-          <option value="1992">1992</option>
-          <option value="1993">1993</option>
-          <option value="1994">1994</option>
-          <option value="1995">1995</option>
-          <option value="1996">1996</option>
-          <option value="1997">1997</option>
-          <option value="1998">1998</option>
-          <option value="1999">1999</option>
-          <option value="2000">2000</option>
-          <option value="2001">2001</option>
-          <option value="2002">2002</option>
-          <option value="2003">2003</option>
-          <option value="2004">2004</option>
-          <option value="2005">2005</option>
-          <option value="2006">2006</option>
-          <option value="2007">2007</option>
-          <option value="2008">2008</option>
-          <option value="2009">2009</option>
-          <option value="2010">2010</option>
-          <option value="2011">2011</option>
-          <option value="2012">2012</option>
-          <option value="2013">2013</option>
-          <option value="2014">2014</option>
-          <option value="2015">2015</option>
-          <option value="2016">2016</option>
-          <option value="2017">2017</option>
-          <option value="2018">2018</option>
-          <option value="2019">2019</option>
-          <option value="2020">2020</option>
-          <option value="2021">2021</option>
-          <option value="2022">2022</option>
-          <option value="2023">2023</option>
+<option value="1991">1991</option>
+<option value="1992">1992</option>
+<option value="1993">1993</option>
+<option value="1994">1994</option>
+<option value="1995">1995</option>
+<option value="1996">1996</option>
+<option value="1997">1997</option>
+<option value="1998">1998</option>
+<option value="1999">1999</option>
+<option value="2000">2000</option>
+<option value="2001">2001</option>
+<option value="2002">2002</option>
+<option value="2003">2003</option>
+<option value="2004">2004</option>
+<option value="2005">2005</option>
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+<option value="2009">2009</option>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
         </select>
       </div>
-      <div class="col">
+      <div class="col-4">
         <select class="form-control custom-select" id="select_year_to" onchange="setFilter(jQuery(this).val(), true, 'yt', 'advance');" name="year_to">
-          <option value="">Bouwjaar tot</option>
-                    <option value="1990">1990</option>
-          <option value="1991">1991</option>
-          <option value="1992">1992</option>
-          <option value="1993">1993</option>
-          <option value="1994">1994</option>
-          <option value="1995">1995</option>
-          <option value="1996">1996</option>
-          <option value="1997">1997</option>
-          <option value="1998">1998</option>
-          <option value="1999">1999</option>
-          <option value="2000">2000</option>
-          <option value="2001">2001</option>
-          <option value="2002">2002</option>
-          <option value="2003">2003</option>
-          <option value="2004">2004</option>
-          <option value="2005">2005</option>
-          <option value="2006">2006</option>
-          <option value="2007">2007</option>
-          <option value="2008">2008</option>
-          <option value="2009">2009</option>
-          <option value="2010">2010</option>
-          <option value="2011">2011</option>
-          <option value="2012">2012</option>
-          <option value="2013">2013</option>
-          <option value="2014">2014</option>
-          <option value="2015">2015</option>
-          <option value="2016">2016</option>
-          <option value="2017">2017</option>
-          <option value="2018">2018</option>
-          <option value="2019">2019</option>
-          <option value="2020">2020</option>
-          <option value="2021">2021</option>
-          <option value="2022">2022</option>
-          <option value="2023">2023</option>
-          <option value="2023">2023</option>
+          <option value="">Bouwjaar tot:</option>
+          <option value="1990">1990</option>
+<option value="1991">1991</option>
+<option value="1992">1992</option>
+<option value="1993">1993</option>
+<option value="1994">1994</option>
+<option value="1995">1995</option>
+<option value="1996">1996</option>
+<option value="1997">1997</option>
+<option value="1998">1998</option>
+<option value="1999">1999</option>
+<option value="2000">2000</option>
+<option value="2001">2001</option>
+<option value="2002">2002</option>
+<option value="2003">2003</option>
+<option value="2004">2004</option>
+<option value="2005">2005</option>
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+<option value="2009">2009</option>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
         </select>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-4">
+        <select class="form-control custom-select" id="select_mile_from" onchange="setFilter(jQuery(this).val(), true, 'mf', 'advance');" name="mile_from">
+          <option value="">Tellerstand van:</option>
+           <option value="0">0 km</option>
+           <option value="5000">5.000</option>
+           <option value="10000">10.000</option>
+           <option value="20000">20.000</option>
+           <option value="30000">30.000</option>
+           <option value="40000">40.000</option>
+           <option value="50000">50.000</option>
+           <option value="75000">75.000</option>
+           <option value="100000">100.000</option>
+           <option value="150000">150.000</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <select class="form-control custom-select" id="select_mile_to" onchange="setFilter(jQuery(this).val(), true, 'mt', 'advance');" name="mile_to">
+          <option value="">Tellerstand tot:</option>
+           <option value="5000">5.000</option>
+           <option value="10000">10.000</option>
+           <option value="20000">20.000</option>
+           <option value="30000">30.000</option>
+           <option value="40000">40.000</option>
+           <option value="50000">50.000</option>
+           <option value="75000">75.000</option>
+           <option value="100000">100.000</option>
+           <option value="150000">150.000</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <select class="form-control custom-select" id="select_price" onchange="setFilter(jQuery(this).val(), true, 'pr', 'advance');" name="price">
+          <option value="0">Prijs vanaf:</option>
+          <option value="0">€ 0</option>
+          <option value="1000">€ 20</option>
+          <option value="2000">€ 40</option>
+          <option value="3000">€ 60</option>
+          <option value="4000">€ 80</option>
+          <option value="5000">€ 100</option>
+          <option value="6000">€ 120</option>
+          <option value="7000">€ 140</option>
+          <option value="8000">€ 160</option>
+          <option value="9000">€ 180</option>
+          <option value="10000">€ 200</option>
+          <option value="20000">€ 400</option>
+          <option value="30000">€ 600</option>
+          <option value="40000">€ 800</option>
+          <option value="50000">€ 1.000</option>
+          <option value="60000">€ 1.200</option>
+          <option value="70000">€ 1.400</option>
+          <option value="80000">€ 1.600</option>
+          <option value="90000">€ 1.800</option>
+          <option value="100000">€ 2.000</option>
+          <option value="200000">€ 4.000</option>
+          <option value="300000">€ 6.000</option>
+          <option value="400000">€ 8.000</option>
+          <option value="500000">€ 10.000</option>
+          <option value="600000">€ 12.000</option>
+          <option value="700000">€ 14.000</option>
+          <option value="800000">€ 16.000</option>
+          <option value="900000">€ 18.000</option>
+          <option value="1000000">€ 20.000</option>
+        </select>
+      </div>
+    </div>
+  </div>
+ <div class="row mt-4">
+      <div class="col">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Titel advertentie</th>
+              <th scope="col">Prijs</th>
+              <th scope="col">Bouwjaar</th>
+              <th scope="col">Kilometerstand</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Table rows will be populated dynamically -->
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
@@ -127,4 +214,5 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
